@@ -1,0 +1,14 @@
+[Unit]
+Description=Run traffic lights
+
+[Service]
+ExecStart=/home/pi/src/traffic/traffic.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=traffic
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
